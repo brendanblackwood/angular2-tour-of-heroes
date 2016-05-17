@@ -1,18 +1,36 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "outDir": "dist/app",
+    "target": "ES5",
     "module": "system",
-    "moduleResolution": "node",
     "sourceMap": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "moduleResolution": "node",
     "removeComments": false,
     "noImplicitAny": true,
     "suppressImplicitAnyIndexErrors": true
   },
-  "exclude": [
-    "node_modules",
-    "typings/main",
-    "typings/main.d.ts"
+  "filesGlob": [
+    "app/**/*.ts",
+    "typings/**/*.d.ts",
+    "!typings/main/**/*.ts",
+    "!typings/main.d.ts"
+  ],
+  "atom": {
+    "rewriteTsconfig": true
+  },
+  "files": [
+    "app/app.component.ts",
+    "app/dashboard.component.ts",
+    "app/hero-detail.component.ts",
+    "app/hero.service.ts",
+    "app/hero.ts",
+    "app/heroes.component.ts",
+    "app/main.ts",
+    "app/mock-heroes.ts",
+    "typings/browser.d.ts",
+    "typings/browser/ambient/es6-shim/index.d.ts",
+    "typings/browser/ambient/jasmine/index.d.ts"
   ]
 }
